@@ -16,16 +16,7 @@ export default function Home() {
           description="Revisão das aulas de React e Next.js"
           imageUrl="https://i.pinimg.com/1200x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg"
         />
-        {/* <Card
-          title="React Framework"
-          description="Revisão das aulas de React e Next.js"
-          imageUrl="https://i.pinimg.com/1200x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg"
-        />
-        <Card
-          title="NextJs"
-          description="Revisão das aulas de React e Next.js"
-          imageUrl="https://i.pinimg.com/1200x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg"
-        /> */}
+
       </main>
     </div>
   );
