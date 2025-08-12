@@ -8,22 +8,36 @@ export default function Lampada() {
   const lampadaLigada = "/Lâmpada_isolada_em_fundo_transparente___PSD_Premium_gerado_com_IA-removebg-preview.png";
   const lampadaDesligada = "/ee454afb-ff0a-4bc0-934e-3c462cc00575-removebg-preview.png";
 
+  let imagemRenderizada;
+
+  if (ligada) {
+    imagemRenderizada = (
+      <img
+        src={lampadaLigada}
+        alt="Lâmpada ligada"
+        className="max-w-full max-h-full transition-transform duration-500 scale-110"
+        style={{ objectFit: "contain" }}
+      />
+    );
+  } else {
+    imagemRenderizada = (
+      <img
+        src={lampadaDesligada}
+        alt="Lâmpada desligada"
+        className="max-w-full max-h-full transition-transform duration-500 scale-100"
+        style={{ objectFit: "contain" }}
+      />
+    );
+  }
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-tr from-gray-200 via-gray-100 to-gray-300 p-6">
       <h1 className="text-3xl font-extrabold mb-8 text-gray-800 drop-shadow-md select-none">
         Clique para acender/apagar a lâmpada:
       </h1>
 
-
-      <div className="w-48 h-48 mb-6 rounded-2xl shadow-lg overflow-hidden flex items-center justify-center ">
-        <img
-          src={ligada ? lampadaLigada : lampadaDesligada}
-          alt="Lâmpada"
-          className={`max-w-full max-h-full transition-transform duration-500 ${
-            ligada ? "scale-110" : "scale-100"
-          }`}
-          style={{ objectFit: "contain" }}
-        />
+      <div className="w-48 h-48 mb-6 rounded-2xl overflow-hidden flex items-center  from-gray-200 via-gray-100 to-gray-300 p-6 justify-center">
+        {imagemRenderizada}
       </div>
 
       <button
