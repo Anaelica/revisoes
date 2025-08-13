@@ -13,11 +13,11 @@ export default function MiniDisplay() {
             </div>
 
             <div className="grid grid-cols-3 gap-3 mt-6">
-                {[..."0123456789"].map((num) => (
+                {[..."1234567890"].map((num) => (
                     <button
                         key={num}
                         className="bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold p-4 rounded-lg shadow-md w-19 transition-all active:scale-95"
-                        onClick={() => setDisplay(display.length < 12 ? display + num : display)}
+                        onClick={() => setDisplay(display.length < 15 ? display + num : display)}
                     >
                         {num}
                     </button>
