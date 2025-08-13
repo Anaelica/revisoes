@@ -5,7 +5,7 @@ type CardProps = {
   title: string;
   description: string;
   imageUrl: string;
-  category?: string; // opcional
+  category?: string; 
 };
 
 export default function Card({ title, description, imageUrl, category }: CardProps) {
