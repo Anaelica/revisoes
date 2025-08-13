@@ -1,5 +1,7 @@
-// app/page.tsx ou qualquer página que importe Card
+'use client'
+
 import Card from "@/components/Card";
+import LikeButton from "./Usestates/LikeButto";
 
 const items = [
   {
@@ -50,15 +52,20 @@ export default function Home() {
         </p>
       </header>
 
-      <main className="grid lg:grid-cols-3 gap-8 px-20 py-12 justify-center">
+      <main className="grid lg:grid-cols-3 gap-20 px-34 py-12 justify-center">
         {items.map((item, index) => (
-          <Card
-            key={index}
-            title={item.title}
-            description={item.description}
-            imageUrl={item.imageUrl}
-            category={item.category}
-          />
+          <div key={index} className="relative transform transition-all duration-300 hover:scale-105">
+            <div className="absolute ml-20 top-2 z-10 transform transition-all duration-300 hover:scale-105">
+              <LikeButton />
+            </div>
+
+            <Card
+              title={item.title}
+              description={item.description}
+              imageUrl={item.imageUrl}
+              category={item.category}
+            />
+          </div>
         ))}
       </main>
     </div>
