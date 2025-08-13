@@ -1,39 +1,7 @@
 'use client'
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 import Card from "@/components/Card";
-
-const LikeButton = () => {
-  const [likes, setLikes] = useState(0);
-  const [isLiked, setIsLiked] = useState(false);
-
-  const handleLike = () => {
-    setLikes(likes + 1);
-    setIsLiked(true);
-    setTimeout(() => setIsLiked(false), 300);
-  };
-
-  return (
-    <motion.button
-      onClick={handleLike}
-      whileTap={{ scale: 0.8 }}
-      className="flex items-center gap-1 bg-white/80 rounded-full px-3 py-1 shadow-md hover:bg-white transition absolute top-2 right-2 z-10"
-    >
-      <motion.div
-        animate={isLiked ? { scale: [1, 1.4, 1] } : {}}
-        transition={{ duration: 0.3 }}
-      >
-        <Heart
-          size={20}
-          className={isLiked ? "fill-red-500 text-red-500" : "text-red-500"}
-        />
-      </motion.div>
-      <span className="text-sm font-medium">{likes}</span>
-    </motion.button>
-  );
-};
+import LikeButton from "./Usestates/LikeButto";
 
 const items = [
   {
@@ -84,16 +52,19 @@ export default function Home() {
         </p>
       </header>
 
-      <main className="grid lg:grid-cols-3 gap-8 px-20 py-12 justify-center">
+      <main className="grid lg:grid-cols-3 gap-20 px-34 py-12 justify-center">
         {items.map((item, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative transform transition-all duration-300 hover:scale-105">
+            <div className="absolute ml-20 top-2 z-10 transform transition-all duration-300 hover:scale-105">
+              <LikeButton />
+            </div>
+
             <Card
               title={item.title}
               description={item.description}
               imageUrl={item.imageUrl}
               category={item.category}
             />
-            <LikeButton />
           </div>
         ))}
       </main>

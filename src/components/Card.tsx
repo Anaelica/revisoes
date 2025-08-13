@@ -10,7 +10,7 @@ type CardProps = {
 
 export default function Card({ title, description, imageUrl, category }: CardProps) {
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-[400px] h-[380px] max-w-sm transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-[385px] h-[380px] max-w-sm hover:shadow-2xl">
       <img src={imageUrl} alt={title} className="w-full h-52 object-cover" />
       <div className="p-4">
         {category && (
