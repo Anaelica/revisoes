@@ -12,7 +12,7 @@ export default function MiniDisplay() {
     const calculateResult = () => {
         try {
             const expression = display.replace(/×/g, '*').replace(/÷/g, '/')
-            const result = eval(expression) // ⚠️ Apenas para testes
+            const result = eval(expression) 
             setDisplay(result.toString())
         } catch {
             setDisplay("Erro")
