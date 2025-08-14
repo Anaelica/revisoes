@@ -6,7 +6,7 @@ export default function MiniDisplay() {
     const [display, setDisplay] = useState("")
 
     const handleClick = (value) => {
-        if (display.length < 20) setDisplay(display + value)
+        if (display.length < 10) setDisplay(display + value)
     }
 
     const calculateResult = () => {
