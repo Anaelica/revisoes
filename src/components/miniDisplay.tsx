@@ -12,7 +12,7 @@ export default function MiniDisplay() {
     const calculateResult = () => {
         try {
             const expression = display.replace(/×/g, '*').replace(/÷/g, '/')
-            const result = eval(expression) // ⚠️ Apenas para testes
+            const result = eval(expression) 
             setDisplay(result.toString())
         } catch {
             setDisplay("Erro")
@@ -20,8 +20,7 @@ export default function MiniDisplay() {
     }
 
     const buttons = [
-        { label: "C", color: "bg-gray-400 text-black", action: () => setDisplay("") },
-        { label: "%", color: "bg-gray-400 text-black", action: () => handleClick("%") },
+        { label: "C", color: "bg-gray-400 text-black h-16 ml-0.5 col-span-2", action: () => setDisplay("") },
         { label: "⌫", color: "bg-gray-400 text-black", action: () => setDisplay(display.slice(0, -1)) },
         { label: "÷", color: "bg-orange-500 text-white", action: () => handleClick("÷") },
 

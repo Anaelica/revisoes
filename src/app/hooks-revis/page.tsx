@@ -1,4 +1,4 @@
-// app/page.tsx
+
 import MiniDisplay from "@/components/miniDisplay";
 
 export default function Page() {
