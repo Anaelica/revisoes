@@ -12,7 +12,6 @@ export default function MusicPlayer() {
 
   return (
     <div className="flex flex-col text-black items-center justify-center p-6">
-
       <div className="w-full max-w-lg h-1 bg-gray-300 rounded-full mb-6">
         <div className="w-3/4 h-1 bg-black rounded-full relative">
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full"></div>
