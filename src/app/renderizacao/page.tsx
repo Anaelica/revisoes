@@ -1,17 +1,10 @@
+import MusicPlayer from "./player/player";
 
-import React from 'react';
-import LikeButton from '@/components/LikeButton';
-
-export default function RenderizacaoPage() {
-    return (
-        <div className="bg-white min-h-screen flex flex-col items-center justify-center">
-            <div className='flex text-black font-semibold p-6 rounded-lg shadow-md'>
-                <h1>Renderização de Páginas</h1>
-            </div>
-            <div className="text-black font-semibold flex flex-col items-center">
-
-                <LikeButton />
-            </div>
-        </div>
-    );
+export default function home() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center text-black bg-gray-100">
+      <h1 className="text-3xl font-bold mb-8">Music Player</h1>
+      <MusicPlayer />
+    </div>
+  );
 }
