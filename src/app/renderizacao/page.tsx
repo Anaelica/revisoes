@@ -1,5 +1,4 @@
 import MusicPlayer from "./player/player";
-import likebutton from "@/components/LikeButton";
 
 export default function home() {
   return (
